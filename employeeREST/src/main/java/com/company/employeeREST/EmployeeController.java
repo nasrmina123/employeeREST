@@ -75,12 +75,11 @@ public class EmployeeController {
 
 
     @GetMapping("/EmployeeUnit")
-   public ResponseEntity<Unit> callEmployeeUnit()
-    {
-        RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<Unit> employeeUnit = restTemplate.getForEntity("http://172.25.143.63:8686/user-service/v1.0/unitOfUser?uId=63d585cd2a83bf75d35bb3a1" , Unit.class);
-        return employeeUnit;
+   public ResponseEntity<Unit> EmployeeUnit(@RequestParam("uId") String uId)
+        {
 
+        ResponseEntity<Unit> employeeUnit = employeeService.callEmployeeUnit(uId);
+        return employeeUnit ;
 
     }
 

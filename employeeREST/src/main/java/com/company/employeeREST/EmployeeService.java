@@ -1,6 +1,7 @@
 package com.company.employeeREST;
 
 import com.company.employeeREST.Beans.Employee;
+import com.company.employeeREST.Beans.Unit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -8,6 +9,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -83,6 +85,13 @@ public class EmployeeService {
         List<EmployeeDTO> employeesLastName = employeeRepository.searchEmployeeLastName(firstName);
         return employeesLastName;
 
+    }
+
+    public ResponseEntity<Unit> callEmployeeUnit(String uId)
+    {
+        RestTemplate restTemplate = new RestTemplate();
+        ResponseEntity<Unit> employeeUnit = restTemplate.getForEntity("http://172.25.143.63:8686/user-service/v1.0/unitOfUser?uId=" + uId , Unit.class);
+        return employeeUnit;
     }
 
 }
