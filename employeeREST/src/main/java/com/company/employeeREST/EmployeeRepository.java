@@ -1,13 +1,13 @@
 package com.company.employeeREST;
 
+import com.company.employeeREST.Beans.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import org.springframework.http.converter.json.GsonBuilderUtils;
 
 import java.util.List;
 
-public interface EmployeeRepository extends JpaRepository<Employee , Integer> {
+public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
 
     @Query( "select E from Employee E where " +

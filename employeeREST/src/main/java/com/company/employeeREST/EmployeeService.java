@@ -1,8 +1,6 @@
 package com.company.employeeREST;
 
-
-
-
+import com.company.employeeREST.Beans.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -33,14 +31,10 @@ public class EmployeeService {
         employeeRepository.save(employee);
     }
 
-
-
-
     public Employee getEmployee(Integer id)
     {
             return employeeRepository.findById(id).get();
     }
-
 
     public ResponseEntity<?> deleteEmployee(Integer id)
     {

@@ -1,4 +1,4 @@
-package com.company.employeeREST;
+package com.company.employeeREST.Beans;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.Columns;
@@ -11,16 +11,16 @@ import java.io.Serializable;
 public class Employee implements Serializable {
     @Id
             @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id ;
+    public int id ;
     @Column(name = "personalCode")
-    int personalCode ;
+    public int personalCode ;
 
     @Column(name = "firstName")
-    String firstName ;
+    public String firstName ;
     @Column(name = "lastName")
-    String lastName ;
-    int age ;
-    int salary ;
+    public String lastName ;
+    public int age ;
+    public int salary ;
 
 
      public Employee() {
