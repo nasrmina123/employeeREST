@@ -1,13 +1,12 @@
 package com.company.employeeREST;
 
 
-import com.company.employeeREST.Beans.Employee;
-import com.company.employeeREST.Beans.Unit;
+import com.company.employeeREST.POJOS.Employee;
+import com.company.employeeREST.POJOS.Unit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 import java.util.Optional;

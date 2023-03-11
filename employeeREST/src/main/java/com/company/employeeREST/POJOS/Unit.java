@@ -1,4 +1,4 @@
-package com.company.employeeREST.Beans;
+package com.company.employeeREST.POJOS;
 
 public class Unit {
 

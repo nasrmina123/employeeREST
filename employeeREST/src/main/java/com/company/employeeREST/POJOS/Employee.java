@@ -1,7 +1,6 @@
-package com.company.employeeREST.Beans;
+package com.company.employeeREST.POJOS;
 
 import jakarta.persistence.*;
-import org.hibernate.annotations.Columns;
 
 import java.io.Serializable;
 

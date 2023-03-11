@@ -1,6 +1,6 @@
 package com.company.employeeREST;
 
-import com.company.employeeREST.Beans.Employee;
+import com.company.employeeREST.POJOS.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
